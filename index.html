@@ -143,6 +143,7 @@
   /* The hidden attribute must beat the display rules above, or the sent form stays on screen. */
   [hidden]{display:none!important}
   label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+  label .hint{font-weight:500;font-size:.85rem;opacity:.75}
   input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:calc(var(--r) - 4px);background:var(--card);color:var(--ink);width:100%}
   textarea{min-height:110px;resize:vertical}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -388,7 +389,7 @@
         </label>
       </div>
       <label>What needs to go?<textarea name="description" required placeholder="Example: a couch, a queen mattress, and about six bags of trash in the garage."></textarea></label>
-      <label>When works for you?<input type="text" name="timing" placeholder="We can do Saturdays 7am to 6pm · Weekdays 5pm to 9pm"></label>
+      <label>When works for you?<span class="hint">We work Saturdays 7am to 6pm and weekdays 5pm to 9pm.</span><input type="text" name="timing" placeholder="Example: this Saturday morning"></label>
       <button class="btn primary" type="submit">Send my quote request</button>
       <p class="fine">We reply by text, usually the same day. No spam, no sharing your number.</p>
       <p class="form-error" id="form-error" hidden>That did not send. Please text us instead at <a href="sms:3852046385">385-204-6385</a>.</p>
