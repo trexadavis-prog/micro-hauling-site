@@ -4,19 +4,17 @@ One file: `index.html`. No software to install, nothing to build. Double-click i
 
 ## Where the site lives (from 2026-09-04)
 
-- Live address for now: https://trexadavis-prog.github.io/micro-hauling-site/
-- Real domain, once bought: https://microhaulingjunkremoval.com (see "Getting the domain" below).
+- Live address: https://microhaulingjunkremoval.com (www. and the old github.io address both forward there).
+- The domain was bought at Spaceship on 2026-09-04 with the business email and renews yearly. Keep auto-renew on.
 - The files are in a GitHub project called `micro-hauling-site` under Trex's GitHub account. It is its own project and shares nothing with the other projects in that account. GitHub Pages serves it free.
 
 How updates happen: tell Claude what to change. Claude edits `index.html`, checks it in a browser, and pushes it to GitHub. The live site updates within a minute or two. Nothing in this folder has to be touched by hand, and there is no hosting bill.
 
 If you ever want to change something without Claude: edit `index.html`, then on github.com open the `micro-hauling-site` project, click the file, click the pencil, paste the new content, and click **Commit changes**. Same result.
 
-## Getting the domain
+## The domain (done 2026-09-04)
 
-microhaulingjunkremoval.com was unregistered on 2026-09-04. To buy it (about $11 a year, you pay, Claude cannot enter payment details):
-
-The owners chose Spaceship (spaceship.com, run by Namecheap) as the place to buy it.
+microhaulingjunkremoval.com is bought and connected. Nothing to do unless the site ever stops loading. If that happens, sign in to Spaceship, open the domain, and check that these five DNS records still exist and that the nameservers are still Spaceship's own. For the record, this is how it was set up:
 
 1. Go to https://www.spaceship.com and search `microhaulingjunkremoval.com`. Click **Add to cart**, then **Checkout**. Create the Spaceship account with the business email. Pick a 1-year term with auto-renew on. Decline every add-on (hosting, email, SSL, "premium DNS"); the site needs none of them, and WHOIS privacy is included free.
 2. After paying, open **Domain Manager** (top menu), click the domain, then find **DNS records** (Spaceship groups it under "Launchpad", and may call the list "Advanced DNS"). Delete the records already in the list: Spaceship adds two A records that point the name at its own parking page, and the site cannot connect until they are gone, then click **Add record** five times and type these exactly. For "Host", Spaceship uses `@` to mean the bare domain.
@@ -30,9 +28,9 @@ The owners chose Spaceship (spaceship.com, run by Namecheap) as the place to buy
    | CNAME | www  | trexadavis-prog.github.io     | default |
 
    Click **Save** after each one. Leave the nameservers on Spaceship's own (the default), or the records above will not apply.
-3. Tell Claude "domain bought". Claude connects it to the GitHub project and turns on the HTTPS padlock. Within an hour or so the site answers at microhaulingjunkremoval.com and www.microhaulingjunkremoval.com, and the github.io address keeps working too.
+3. Claude connected the name to the GitHub project and turned on the HTTPS padlock (done 2026-09-04).
 
-Renewal is yearly on the business email; turn auto-renew on so the site never goes dark.
+Renewal is yearly on the business email at Spaceship; auto-renew keeps the site from going dark.
 
 ## The quote form (done 2026-09-04)
 
@@ -85,7 +83,6 @@ Search `id="about"`. The heading, the paragraph, the two name cards, and the fou
 
 ## Not done yet (on purpose)
 
-- The domain is not bought yet; the site answers at the github.io address until then (see "Getting the domain").
 - The five photo slots are hidden until you send photos. Fill-level photos on the price cards come after the first jobs.
 - No insurance claim on the page. Add "Insured" only after a policy is actually in place.
 - One test send of the quote form by you, from the live site, to confirm it lands in the inbox.
