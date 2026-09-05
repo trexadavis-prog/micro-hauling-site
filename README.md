@@ -34,6 +34,8 @@ Renewal is yearly on the business email at Spaceship; auto-renew keeps the site 
 
 ## The quote form (done 2026-09-04)
 
+Delivery to the business inbox confirmed by the owners 2026-09-04 (after a key swap the same evening).
+
 The form delivers to microhaulingjunkremoval@gmail.com through Web3Forms. The key is already in `index.html` (search `access_key`).
 
 To change the email later: go to https://web3forms.com, type the new address, click **Create Access Key**, copy the key from the email it sends, open `index.html` in Notepad, search `access_key`, and paste the new key in place of the old one, keeping the quote marks. Nothing else on the page needs to change.
@@ -73,7 +75,7 @@ Search `id="about"`. The heading, the paragraph, the two name cards, and the fou
 - **Call or text** in the header opens the phone dialer on a mobile phone.
 - **Text us a photo** opens the texting app with a starter message already typed.
 - **Request a quote online** scrolls down to the form.
-- The form sends to your email through Web3Forms and then shows a green thank-you box in place of the form, with a button to text the photos. If the send fails, a red line asks the customer to text instead.
+- The form sends to your email through Web3Forms and then shows a green thank-you box in place of the form. The box's button opens a text to 385-204-6385 with the customer's request already typed in (name, city, load, description, timing), so when they add photos and hit send, the whole request lands in Google Voice too. If the send fails, a red line asks the customer to text instead.
 
 ## Also on the page, invisible to customers
 

@@ -65,7 +65,8 @@
     id="about"              the About us section; names and story live there
     microhaulingjunkremoval.com  the web address, used in the link-preview tags and the Google facts block (5 places).
                             If a different domain is bought, replace it everywhere.
-    id="thanks"             the message shown after someone sends the quote form
+    id="thanks"             the message shown after someone sends the quote form. Its button opens a text to
+                            the business number with the request already typed in (see the script at the bottom)
   ==========================================================================
 -->
 <style>
@@ -387,8 +388,8 @@
     </form>
     <div id="thanks" hidden>
       <h3>Got it. We will text you a price.</h3>
-      <p>Usually within the hour during our hours, otherwise first thing the next evening or Saturday morning. Want it faster? Text the photos now.</p>
-      <a class="btn primary" href="sms:3852046385?body=Hi!%20I%20just%20sent%20the%20quote%20form.%20Here%20are%20the%20photos:">Text us the photos</a>
+      <p>Usually within the hour during our hours, otherwise first thing the next evening or Saturday morning. Want it faster? Tap below: it opens a text to us with your request already typed in, so just add the photos and hit send.</p>
+      <a class="btn primary" id="thanks-sms" href="sms:3852046385?body=Hi!%20I%20just%20sent%20the%20quote%20form.%20Here%20are%20the%20photos:">Text us the photos</a>
     </div>
   </div>
 </section>
@@ -415,6 +416,15 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (data && data.success) {
+          // Put the request into the "Text us the photos" button, so the customer's own text
+          // carries name, city, load, and description straight to the business number.
+          var f = function (n) { var el = form.elements[n]; return el && el.value ? el.value.trim() : ''; };
+          var d = f('description'); if (d && !/[.!?]$/.test(d)) { d += '.'; }
+          var msg = 'Quote request from ' + f('name') + ' in ' + f('city') + '. ' + f('load_size') + '. ' + d;
+          if (f('timing')) { msg += ' When: ' + f('timing') + '.'; }
+          msg += ' Photos:';
+          var smsBtn = document.getElementById('thanks-sms');
+          if (smsBtn) { smsBtn.href = 'sms:3852046385?body=' + encodeURIComponent(msg); }
           form.hidden = true; thanks.hidden = false;
           thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else { throw new Error(data && data.message); }
