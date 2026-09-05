@@ -85,4 +85,3 @@ Search `id="about"`. The heading, the paragraph, the two name cards, and the fou
 
 - The five photo slots are hidden until you send photos. Fill-level photos on the price cards come after the first jobs.
 - No insurance claim on the page. Add "Insured" only after a policy is actually in place.
-- One test send of the quote form by you, from the live site, to confirm it lands in the inbox.
