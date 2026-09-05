@@ -97,9 +97,9 @@
   .brand{display:flex;align-items:center;text-decoration:none}
   .brand .wordmark{display:block;width:242px;height:50px}
   /* Phones: the wordmark can't wrap like text did, so the header button drops the number (tapping it still dials). */
-  @media (max-width:560px){ .brand .wordmark{width:184px;height:38px} .call .num{display:none} }
+  @media (max-width:560px){ header.top .wrap{min-height:50px} .brand .wordmark{width:150px;height:31px} .call .num{display:none} }
   .call{display:inline-block;padding:10px 16px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:700;white-space:nowrap}
-  @media (max-width:520px){.call{font-size:.85rem;padding:9px 12px}}
+  @media (max-width:560px){header.top .call{font-size:.85rem;padding:7px 12px}}
 
   section{padding:56px 0}
   .hero{padding-top:80px;padding-bottom:80px}
