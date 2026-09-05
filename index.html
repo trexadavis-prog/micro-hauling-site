@@ -9,13 +9,17 @@
 <link rel="canonical" href="https://microhaulingjunkremoval.com/">
 
 <!-- Link preview (what Facebook, Nextdoor, and text messages show when someone pastes the address).
-     og:image points at the truck photo; it starts working the day img/hero-truck.jpg exists. -->
+     og:image is a generated card built from the logo (img/link-preview.png). Swap it for the real
+     truck photo the day img/hero-truck.jpg exists. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Micro Hauling &amp; Junk Removal">
 <meta property="og:title" content="Micro Hauling &amp; Junk Removal | Provo &amp; Utah County | From $75">
 <meta property="og:description" content="Small junk jobs, small prices. Single item $75, full truck and trailer $250, carry-out and sweep included. Text a photo to 385-204-6385 for a firm price.">
 <meta property="og:url" content="https://microhaulingjunkremoval.com/">
-<meta property="og:image" content="https://microhaulingjunkremoval.com/img/hero-truck.jpg">
+<meta property="og:image" content="https://microhaulingjunkremoval.com/img/link-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Micro Hauling &amp; Junk Removal - Provo and Utah County - single item $75">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -34,7 +38,7 @@
   "url": "https://microhaulingjunkremoval.com/",
   "telephone": "+1-385-204-6385",
   "email": "microhaulingjunkremoval@gmail.com",
-  "image": "https://microhaulingjunkremoval.com/img/hero-truck.jpg",
+  "image": "https://microhaulingjunkremoval.com/img/link-preview.png",
   "priceRange": "$75 - $250",
   "paymentAccepted": "Cash, Venmo",
   "currenciesAccepted": "USD",
@@ -74,11 +78,17 @@
 -->
 <style>
   :root{
-    --font:"Segoe UI",Helvetica,Arial,sans-serif;
-    --bg:#ffffff;        /* page background */
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --bg:#f2f6f4;        /* page background - a pale green tint, so white cards lift off it */
+    --surface:#ffffff;   /* cards, the header bar, form fields */
     --ink:#17202a;       /* text */
-    --card:#f6f8fa;      /* card background */
-    --line:#e3e8ee;      /* borders */
+    --ink-soft:#3a444f;  /* lead paragraphs */
+    --ink-muted:#556170; /* small print. A real colour, not faded black */
+    --card:#ffffff;      /* card background */
+    --line:#e3e8ee;      /* hairlines inside cards (list rows, table rows) */
+    --edge:#c7d4d2;      /* the visible outline around a card */
+    --field:#78848f;     /* form field borders - 3.8:1, passes the contrast rule */
+    --shadow:0 1px 2px rgba(23,32,42,.05),0 6px 18px -8px rgba(23,32,42,.14);
     --accent:#0f7b5f;    /* green buttons, prices, highlights */
     --on-accent:#ffffff; /* text on green */
     --accent-soft:#e6f4ef;
@@ -89,18 +99,25 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
+  /* Anchor links were landing about 17px behind the sticky header. */
+  section[id]{scroll-margin-top:80px}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  }
   body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.5}
   a{color:inherit}
   .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 
-  header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+  header.top{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--edge)}
   header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
   .brand{display:flex;align-items:center;text-decoration:none}
   .brand .wordmark{display:block;width:242px;height:50px}
   /* Phones: the wordmark can't wrap like text did, so the header button drops the number (tapping it still dials). */
-  @media (max-width:560px){ header.top .wrap{min-height:50px} .brand .wordmark{width:150px;height:31px} .call .num{display:none} }
-  .call{display:inline-block;padding:10px 16px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:700;white-space:nowrap}
-  @media (max-width:560px){header.top .call{font-size:.85rem;padding:7px 12px}}
+  @media (max-width:560px){ header.top .wrap{min-height:56px} .brand .wordmark{width:150px;height:31px} .call .num{display:none} }
+  .call{display:inline-flex;align-items:center;gap:.32em;min-height:44px;padding:10px 16px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:700;white-space:nowrap}
+  /* 44px minimum on phones: this is the button someone taps standing in their garage. */
+  @media (max-width:560px){header.top .call{font-size:.9rem;padding:8px 14px}}
 
   section{padding:48px 0}
   /* Where we go is one paragraph, so it runs as a short tinted band instead of a full-height section. */
@@ -110,8 +127,8 @@
   .hero{padding-top:80px;padding-bottom:80px}
   h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:0 0 16px;letter-spacing:-.02em;font-weight:700}
   h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 8px;letter-spacing:-.01em}
-  .lead{font-size:1.15rem;max-width:620px;opacity:.9}
-  .sub{opacity:.75;max-width:640px;margin:0 0 28px}
+  .lead{font-size:1.15rem;max-width:620px;color:var(--ink-soft)}
+  .sub{color:var(--ink-muted);max-width:640px;margin:0 0 28px}
   .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
   .btn{display:inline-block;padding:14px 22px;border-radius:var(--r);font-weight:700;text-decoration:none;border:2px solid var(--accent)}
   .btn.primary{background:var(--accent);color:var(--on-accent)}
@@ -121,12 +138,12 @@
   .grid{display:grid;gap:16px}
   .tiers{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
   .two{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-  .card{background:var(--card);border-radius:var(--r);padding:22px}
-  .card h3{margin:0 0 4px;font-size:1.05rem}
-  .price{font-size:2.2rem;font-weight:800;letter-spacing:-.02em;margin:6px 0 8px;color:var(--accent)}
-  .card p{margin:0;opacity:.8;font-size:.95rem}
-  .note{font-size:.95rem;opacity:.8;margin-top:14px}
-  .fine{font-size:.85rem;opacity:.7}
+  .card{background:var(--card);border:1px solid var(--edge);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+  .card h3{margin:0 0 4px;font-size:1.15rem;letter-spacing:-.01em}
+  .price{font-size:2.4rem;font-weight:800;letter-spacing:-.02em;margin:6px 0 8px;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.05}
+  .card p{margin:0;color:var(--ink-muted);font-size:.95rem}
+  .note{font-size:.95rem;color:var(--ink-muted);margin-top:14px;max-width:70ch}
+  .fine{font-size:.85rem;color:var(--ink-muted)}
 
   ul.clean{list-style:none;padding:0;margin:12px 0 0}
   ul.clean li{padding:8px 0;border-bottom:1px solid var(--line)}
@@ -151,19 +168,32 @@
   .quote-side{display:grid;gap:16px}
   .quote-side .card p{margin:0 0 14px}
   .quote-side .card .btn{width:100%;text-align:center;box-sizing:border-box}
-  .quote-side ol{margin:0;padding-left:20px;display:grid;gap:8px;font-size:.95rem;opacity:.85}
+  .quote-side ol{margin:0;padding-left:20px;display:grid;gap:8px;font-size:.95rem;color:var(--ink-muted)}
   .quote-side .tel{font-weight:700;color:var(--accent);text-decoration:none}
   /* The hidden attribute must beat the display rules above, or the sent form stays on screen. */
   [hidden]{display:none!important}
   label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
-  label .hint{font-weight:500;font-size:.85rem;opacity:.75}
-  input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:calc(var(--r) - 4px);background:var(--card);color:var(--ink);width:100%}
+  label .hint{font-weight:500;font-size:.85rem;color:var(--ink-muted)}
+  input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--field);border-radius:calc(var(--r) - 4px);background:var(--surface);color:var(--ink);width:100%}
   textarea{min-height:110px;resize:vertical}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media (max-width:520px){.row{grid-template-columns:1fr}}
   button.btn{border:0;cursor:pointer;justify-self:start;font:inherit}
 
-  footer{padding:36px 0 24px;font-size:.9rem;opacity:.75;border-top:1px solid var(--line)}
+  /* Nothing on the page had a focus ring, so a keyboard user had no idea where they were. */
+  a:focus-visible,button:focus-visible,input:focus-visible,
+  select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent-ink);outline-offset:2px;border-radius:4px}
+
+  /* THE RIDGE. The two peaks from the logo icon, stretched across the page. Inline SVG: no image
+     file, no extra download. preserveAspectRatio="none" lets it stretch instead of crop. */
+  .ridge{display:block;width:100%;height:74px;fill:var(--accent)}
+  .ridge.dark{height:60px;fill:#0a3d2f}
+  @media (max-width:560px){.ridge{height:40px}.ridge.dark{height:34px}}
+
+  /* The page used to start white and end white. Now it ends in the mountains. */
+  footer{padding:44px 0 32px;font-size:.95rem;background:#0a3d2f;color:#d6e8e0;border-top:0}
+  footer strong{color:#ffffff}
+  footer a{color:#bcd9cf}
 
   /* Photo slots. A slot with no <img> inside shows a dashed grey box and its caption,
      so the page never shows a broken image. Drop an <img> in and the box disappears. */
@@ -190,8 +220,12 @@
   .pair .photo{aspect-ratio:1/1}
   .pair .photo img{aspect-ratio:1/1}
 
-  #about{background:var(--card)}
-  #about .card{background:var(--bg)}
+  /* The tinted section is the deeper brand tint now; its cards stay white like every other card. */
+  #about{background:var(--accent-soft)}
+  #about .card{background:var(--surface)}
+  /* The owner photo is hidden until it arrives, which left the bios running the full 1000px -
+     about 150 characters a line on a laptop. Cap them at a readable measure. */
+  #about .who,#about ul.clean,#about .lead{max-width:680px}
   #about .who{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
   #about .who h3{margin:0 0 4px;font-size:1.05rem}
 
@@ -236,6 +270,8 @@
     </figure>
   </div>
 </section>
+
+<svg class="ridge" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,80 L0,63 L112,20 L206,55 L330,6 L448,50 L596,0 L732,52 L862,18 L986,58 L1094,28 L1200,54 L1200,80 Z"/></svg>
 
 <section id="prices">
   <div class="wrap">
@@ -438,6 +474,7 @@
   </div>
 </section>
 
+<svg class="ridge dark" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,80 L0,63 L112,20 L206,55 L330,6 L448,50 L596,0 L732,52 L862,18 L986,58 L1094,28 L1200,54 L1200,80 Z"/></svg>
 <footer>
   <div class="wrap">
     <strong>Micro Hauling &amp; Junk Removal</strong> · Provo, Utah · <a href="tel:3852046385">385-204-6385</a><br>
