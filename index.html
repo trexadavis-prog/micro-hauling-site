@@ -140,6 +140,14 @@
   .steps .card::before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:18px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:800}
 
   form{display:grid;gap:14px;max-width:560px}
+  /* Quote section: form on the left, a "rather text?" column on the right so wide screens are not half empty. Stacks on phones. */
+  .quote-grid{display:grid;gap:32px;align-items:start}
+  @media (min-width:860px){.quote-grid{grid-template-columns:minmax(0,560px) 1fr;gap:56px} .quote-side{position:sticky;top:88px}}
+  .quote-side{display:grid;gap:16px}
+  .quote-side .card p{margin:0 0 14px}
+  .quote-side .card .btn{width:100%;text-align:center;box-sizing:border-box}
+  .quote-side ol{margin:0;padding-left:20px;display:grid;gap:8px;font-size:.95rem;opacity:.85}
+  .quote-side .tel{font-weight:700;color:var(--accent);text-decoration:none}
   /* The hidden attribute must beat the display rules above, or the sent form stays on screen. */
   [hidden]{display:none!important}
   label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
@@ -370,6 +378,8 @@
       message (id="thanks") without leaving the page. If the script cannot run, the form still sends
       the old way and Web3Forms shows its own thank-you page.
     -->
+    <div class="quote-grid">
+    <div class="quote-form">
     <form action="https://api.web3forms.com/submit" method="POST" id="quote-form">
       <input type="hidden" name="access_key" value="fba05fb6-97f8-4f39-8769-763c49619765">
       <input type="hidden" name="subject" value="New quote request from the website">
@@ -402,6 +412,23 @@
       <h3>Got it. We will text you a price.</h3>
       <p>Usually within the hour during our hours, otherwise first thing the next evening or Saturday morning. Want it faster? Tap below: it opens a text to us with your request already typed in, so just add the photos and hit send.</p>
       <a class="btn primary" id="thanks-sms" href="sms:3852046385?body=Hi!%20I%20just%20sent%20the%20quote%20form.%20Here%20are%20the%20photos:">Text us the photos</a>
+    </div>
+    </div>
+    <aside class="quote-side">
+      <div class="card">
+        <h3>Rather text than type?</h3>
+        <p>Send a photo of the pile and your city to <a class="tel" href="sms:3852046385">385-204-6385</a>. That is all we need to quote it.</p>
+        <a class="btn ghost" href="sms:3852046385?body=Hi!%20I%20would%20like%20a%20quote.%20Here%20is%20a%20photo%20of%20what%20needs%20to%20go:">Text us a photo</a>
+      </div>
+      <div class="card">
+        <h3>What happens next</h3>
+        <ol>
+          <li>We text you a firm price, usually the same day.</li>
+          <li>You pick a Saturday or a weekday evening.</li>
+          <li>Two of us show up, carry it out, sweep up, and go.</li>
+        </ol>
+      </div>
+    </aside>
     </div>
   </div>
 </section>
