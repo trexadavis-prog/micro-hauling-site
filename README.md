@@ -16,17 +16,20 @@ If you ever want to change something without Claude: edit `index.html`, then on 
 
 microhaulingjunkremoval.com was unregistered on 2026-09-04. To buy it (about $11 a year, you pay, Claude cannot enter payment details):
 
-1. Go to https://porkbun.com (or https://www.cloudflare.com/products/registrar/). Search `microhaulingjunkremoval.com`. Add it to the cart and check out with the business email. Turn off any add-ons; WHOIS privacy is free and already on.
-2. In the domain's DNS settings, delete any records already there, then add these five. Type them exactly.
+The owners chose Spaceship (spaceship.com, run by Namecheap) as the place to buy it.
 
-   | Type  | Host / Name | Answer / Value                   |
-   |-------|-------------|----------------------------------|
-   | A     | (blank or @)| 185.199.108.153                  |
-   | A     | (blank or @)| 185.199.109.153                  |
-   | A     | (blank or @)| 185.199.110.153                  |
-   | A     | (blank or @)| 185.199.111.153                  |
-   | CNAME | www         | trexadavis-prog.github.io        |
+1. Go to https://www.spaceship.com and search `microhaulingjunkremoval.com`. Click **Add to cart**, then **Checkout**. Create the Spaceship account with the business email. Pick a 1-year term with auto-renew on. Decline every add-on (hosting, email, SSL, "premium DNS"); the site needs none of them, and WHOIS privacy is included free.
+2. After paying, open **Domain Manager** (top menu), click the domain, then the **DNS** tab (Spaceship calls it "Advanced DNS"). If it offers a "Launchpad" or "Unstoppable" toggle, leave those alone. Delete any records already in the list (Spaceship adds a couple of parking records), then click **Add record** five times and type these exactly. For "Host", Spaceship uses `@` to mean the bare domain.
 
+   | Type  | Host | Value / Points to             | TTL     |
+   |-------|------|-------------------------------|---------|
+   | A     | @    | 185.199.108.153               | default |
+   | A     | @    | 185.199.109.153               | default |
+   | A     | @    | 185.199.110.153               | default |
+   | A     | @    | 185.199.111.153               | default |
+   | CNAME | www  | trexadavis-prog.github.io     | default |
+
+   Click **Save** after each one. Leave the nameservers on Spaceship's own (the default), or the records above will not apply.
 3. Tell Claude "domain bought". Claude connects it to the GitHub project and turns on the HTTPS padlock. Within an hour or so the site answers at microhaulingjunkremoval.com and www.microhaulingjunkremoval.com, and the github.io address keeps working too.
 
 Renewal is yearly on the business email; turn auto-renew on so the site never goes dark.
