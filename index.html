@@ -94,10 +94,10 @@
 
   header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
   header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.01em;font-size:1.1rem;text-decoration:none}
-  .brand .mark{width:72px;height:42px;flex:none}
-  @media (max-width:480px){ .brand .mark{width:58px;height:34px} }
-  .brand small{display:block;font-weight:500;font-size:.75rem;opacity:.7}
+  .brand{display:flex;align-items:center;text-decoration:none}
+  .brand .wordmark{display:block;width:242px;height:50px}
+  /* Phones: the wordmark can't wrap like text did, so the header button drops the number (tapping it still dials). */
+  @media (max-width:560px){ .brand .wordmark{width:184px;height:38px} .call .num{display:none} }
   .call{display:inline-block;padding:10px 16px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:700;white-space:nowrap}
   @media (max-width:520px){.call{font-size:.85rem;padding:9px 12px}}
 
@@ -193,8 +193,9 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><img class="mark" src="img/icon-wide.png" alt="" width="72" height="42"><span>Micro Hauling &amp; Junk Removal<small>Provo &amp; Utah County</small></span></a>
-    <a class="call" href="tel:3852046385">Call or text 385-204-6385</a>
+    <!-- The wordmark is the site's name in the header. The file is the final logo (letters are outlines, no web font needed). -->
+    <a class="brand" href="#top"><img class="wordmark" src="img/wordmark.svg" alt="Micro Hauling &amp; Junk Removal, Provo and Utah County" width="242" height="50"></a>
+    <a class="call" href="tel:3852046385">Call or text<span class="num"> 385-204-6385</span></a>
   </div>
 </header>
 
