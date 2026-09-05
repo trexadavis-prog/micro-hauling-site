@@ -67,6 +67,7 @@
     id="about"              the About us section; names and story live there
     microhaulingjunkremoval.com  the web address, used in the link-preview tags and the Google facts block (5 places).
                             If a different domain is bought, replace it everywhere.
+    id="side-text"          the "Rather text than type?" card beside the form. Hidden once the form is sent.
     id="thanks"             the message shown after someone sends the quote form. Its button opens a text to
                             the business number with the request already typed in (see the script at the bottom)
   ==========================================================================
@@ -419,7 +420,7 @@
     </div>
     </div>
     <aside class="quote-side">
-      <div class="card">
+      <div class="card" id="side-text">
         <h3>Rather text than type?</h3>
         <p>Send a photo of the pile and your city to <a class="tel" href="sms:3852046385">385-204-6385</a>. That is all we need to quote it.</p>
         <a class="btn ghost" href="sms:3852046385?body=Hi!%20I%20would%20like%20a%20quote.%20Here%20is%20a%20photo%20of%20what%20needs%20to%20go:">Text us a photo</a>
@@ -470,6 +471,10 @@
           if (smsBtn) { smsBtn.href = 'sms:3852046385?body=' + encodeURIComponent(msg); }
           btn.textContent = 'Sent';
           form.hidden = true; thanks.hidden = false;
+          // They have already typed, so the "Rather text than type?" card is moot. The green box's
+          // own button carries the request prefilled, which is the better one to leave on screen.
+          var sideText = document.getElementById('side-text');
+          if (sideText) { sideText.hidden = true; }
           thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else { throw new Error(data && data.message); }
       })
