@@ -81,7 +81,7 @@ Search `id="about"`. The heading, the paragraph, the two name cards, and the fou
 
 - Link-preview tags, so pasting the address into Facebook, Nextdoor, or a text shows the name, a one-line pitch, and (once the truck photo exists) the picture.
 - A business-facts block for Google (name, phone, hours, service towns, price range). City only; no street address anywhere.
-- A green tab icon with a white M. No file needed for it.
+- The tab icon and the small mark in the header are the Micro Hauling icon (two peaks with the black M square), PNG files in `img/` (favicon-32, icon-192, apple-touch-icon, icon-wide). Decided 2026-09-04; masters live in `deliverables/logos/icon/`.
 
 ## Not done yet (on purpose)
 

@@ -19,8 +19,10 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Tab icon: a green square with a white M. No file needed. -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f7b5f'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Segoe UI,Helvetica,Arial,sans-serif' font-weight='800' font-size='40' fill='%23fff'%3EM%3C/text%3E%3C/svg%3E">
+<!-- Tab icon: the Micro Hauling icon (two peaks, black M square). Files live in img/. -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 <!-- Business facts for Google, written the way search engines read them. City only, no street address. -->
 <script type="application/ld+json">
@@ -92,7 +94,9 @@
 
   header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
   header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
-  .brand{font-weight:800;letter-spacing:-.01em;font-size:1.1rem;text-decoration:none}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.01em;font-size:1.1rem;text-decoration:none}
+  .brand .mark{width:72px;height:42px;flex:none}
+  @media (max-width:480px){ .brand .mark{width:58px;height:34px} }
   .brand small{display:block;font-weight:500;font-size:.75rem;opacity:.7}
   .call{display:inline-block;padding:10px 16px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:700;white-space:nowrap}
   @media (max-width:520px){.call{font-size:.85rem;padding:9px 12px}}
@@ -189,7 +193,7 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top">Micro Hauling &amp; Junk Removal<small>Provo &amp; Utah County</small></a>
+    <a class="brand" href="#top"><img class="mark" src="img/icon-wide.png" alt="" width="72" height="42"><span>Micro Hauling &amp; Junk Removal<small>Provo &amp; Utah County</small></span></a>
     <a class="call" href="tel:3852046385">Call or text 385-204-6385</a>
   </div>
 </header>
