@@ -1,0 +1,10 @@
+Photos for the website go in this folder. Names the page expects:
+
+hero-truck.jpg      truck with trailer hitched, both owners at the tailgate
+how-after.jpg       a swept-clean garage corner or room after a job
+about-owners.jpg    Connor and Trex at the truck, faces visible
+job1-before.jpg     a real job before, from the doorway
+job1-after.jpg      same spot, same angle, after
+
+Later: tier-single.jpg, tier-quarter.jpg, tier-half.jpg, tier-full.jpg for the price cards.
+Landscape, phone camera, under about 1 MB each. See ../README.md, 'Adding photos'.

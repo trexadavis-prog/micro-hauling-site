@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Micro Hauling &amp; Junk Removal | Provo &amp; Utah County | From $65</title>
+<meta name="description" content="Affordable junk removal for small jobs in Provo and Utah County. Single item from $65, full truck and trailer $250. Carry-out included. Text a photo, get a firm price.">
+<meta name="theme-color" content="#0f7b5f">
+<link rel="canonical" href="https://microhaulingjunkremoval.com/">
+
+<!-- Link preview (what Facebook, Nextdoor, and text messages show when someone pastes the address).
+     og:image points at the truck photo; it starts working the day img/hero-truck.jpg exists. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Micro Hauling &amp; Junk Removal">
+<meta property="og:title" content="Micro Hauling &amp; Junk Removal | Provo &amp; Utah County | From $65">
+<meta property="og:description" content="Small junk jobs, small prices. Single item from $65, full truck and trailer $250, carry-out and sweep included. Text a photo to 385-204-6385 for a firm price.">
+<meta property="og:url" content="https://microhaulingjunkremoval.com/">
+<meta property="og:image" content="https://microhaulingjunkremoval.com/img/hero-truck.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tab icon: a green square with a white M. No file needed. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f7b5f'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Segoe UI,Helvetica,Arial,sans-serif' font-weight='800' font-size='40' fill='%23fff'%3EM%3C/text%3E%3C/svg%3E">
+
+<!-- Business facts for Google, written the way search engines read them. City only, no street address. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Micro Hauling & Junk Removal",
+  "description": "Affordable junk removal for small jobs in Provo and Utah County. Single item from $65, full truck and trailer $250. Carry-out, loading, disposal, and sweep included.",
+  "url": "https://microhaulingjunkremoval.com/",
+  "telephone": "+1-385-204-6385",
+  "email": "microhaulingjunkremoval@gmail.com",
+  "image": "https://microhaulingjunkremoval.com/img/hero-truck.jpg",
+  "priceRange": "$65 - $250",
+  "paymentAccepted": "Cash, Venmo",
+  "currenciesAccepted": "USD",
+  "address": {"@type": "PostalAddress", "addressLocality": "Provo", "addressRegion": "UT", "addressCountry": "US"},
+  "areaServed": [
+    {"@type": "City", "name": "Provo"}, {"@type": "City", "name": "Orem"}, {"@type": "City", "name": "Vineyard"},
+    {"@type": "City", "name": "Lindon"}, {"@type": "City", "name": "Pleasant Grove"}, {"@type": "City", "name": "American Fork"},
+    {"@type": "City", "name": "Lehi"}, {"@type": "City", "name": "Saratoga Springs"}, {"@type": "City", "name": "Springville"},
+    {"@type": "City", "name": "Mapleton"}, {"@type": "City", "name": "Spanish Fork"}, {"@type": "City", "name": "Salem"},
+    {"@type": "City", "name": "Payson"}
+  ],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "17:00", "closes": "21:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:00", "closes": "18:00"}
+  ]
+}
+</script>
+<!--
+  ==========================================================================
+  MICRO HAULING & JUNK REMOVAL  -  website
+  One file. No build step. Open it in any browser to see it.
+  Edit with Notepad, VS Code, or ask Claude. See README.md next to this file.
+
+  QUICK FINDS (search for these to change them):
+    385-204-6385            your business phone number (Google Voice, rings both phones)
+    access_key              the quote-form key (74aae58f-cfe8-432c-93ff-fbe7ac18e97e), delivers to microhaulingjunkremoval@gmail.com (see README)
+    $75 / $105 / $150 / $250 the four in-home prices ($10 less from the driveway); +$30 per extra large item; +$40 trailer fee
+    class="photo"           a photo slot. Grey dashed box until the real photo goes in (see README, "Adding photos")
+    LAUNCH MODE             the CSS block that hides empty photo slots. Delete it to see the dashed boxes again
+    id="about"              the About us section; names and story live there
+    microhaulingjunkremoval.com  the web address, used in the link-preview tags and the Google facts block (5 places).
+                            If a different domain is bought, replace it everywhere.
+    id="thanks"             the message shown after someone sends the quote form
+  ==========================================================================
+-->
+<style>
+  :root{
+    --font:"Segoe UI",Helvetica,Arial,sans-serif;
+    --bg:#ffffff;        /* page background */
+    --ink:#17202a;       /* text */
+    --card:#f6f8fa;      /* card background */
+    --line:#e3e8ee;      /* borders */
+    --accent:#0f7b5f;    /* green buttons, prices, highlights */
+    --on-accent:#ffffff; /* text on green */
+    --accent-soft:#e6f4ef;
+    --accent-ink:#0a5c46;
+    --good:#0f7b5f;
+    --bad:#b42318;
+    --r:12px;            /* corner rounding */
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.5}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+  .brand{font-weight:800;letter-spacing:-.01em;font-size:1.1rem;text-decoration:none}
+  .brand small{display:block;font-weight:500;font-size:.75rem;opacity:.7}
+  .call{display:inline-block;padding:10px 16px;border-radius:var(--r);background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:700;white-space:nowrap}
+  @media (max-width:520px){.call{font-size:.85rem;padding:9px 12px}}
+
+  section{padding:56px 0}
+  .hero{padding-top:80px;padding-bottom:80px}
+  h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:0 0 16px;letter-spacing:-.02em;font-weight:700}
+  h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 8px;letter-spacing:-.01em}
+  .lead{font-size:1.15rem;max-width:620px;opacity:.9}
+  .sub{opacity:.75;max-width:640px;margin:0 0 28px}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+  .btn{display:inline-block;padding:14px 22px;border-radius:var(--r);font-weight:700;text-decoration:none;border:2px solid var(--accent)}
+  .btn.primary{background:var(--accent);color:var(--on-accent)}
+  .btn.ghost{color:var(--accent);background:transparent}
+  .badge{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-weight:700;font-size:.8rem;margin-bottom:12px}
+
+  .grid{display:grid;gap:16px}
+  .tiers{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+  .two{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{background:var(--card);border-radius:var(--r);padding:22px}
+  .card h3{margin:0 0 4px;font-size:1.05rem}
+  .price{font-size:2.2rem;font-weight:800;letter-spacing:-.02em;margin:6px 0 8px;color:var(--accent)}
+  .card p{margin:0;opacity:.8;font-size:.95rem}
+  .note{font-size:.95rem;opacity:.8;margin-top:14px}
+  .fine{font-size:.85rem;opacity:.7}
+
+  ul.clean{list-style:none;padding:0;margin:12px 0 0}
+  ul.clean li{padding:8px 0;border-bottom:1px solid var(--line)}
+  ul.clean li:last-child{border-bottom:0}
+  .yes li::before{content:"✓  ";color:var(--good);font-weight:800}
+  .no li::before{content:"✕  ";color:var(--bad);font-weight:800}
+
+  table{width:100%;border-collapse:collapse;margin-top:10px}
+  td{padding:10px 0;border-bottom:1px solid var(--line)}
+  td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+
+  .promise{background:var(--accent-soft);border-left:6px solid var(--accent);padding:20px 22px;border-radius:var(--r);font-size:1.1rem}
+
+  .steps{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:step}
+  .steps .card{position:relative;padding-top:28px}
+  .steps .card::before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:18px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:800}
+
+  form{display:grid;gap:14px;max-width:560px}
+  label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+  input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:calc(var(--r) - 4px);background:var(--card);color:var(--ink);width:100%}
+  textarea{min-height:110px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:520px){.row{grid-template-columns:1fr}}
+  button.btn{border:0;cursor:pointer;justify-self:start;font:inherit}
+
+  footer{padding:36px 0 24px;font-size:.9rem;opacity:.75;border-top:1px solid var(--line)}
+
+  /* Photo slots. A slot with no <img> inside shows a dashed grey box and its caption,
+     so the page never shows a broken image. Drop an <img> in and the box disappears. */
+  .photo{margin:0;border-radius:var(--r);overflow:hidden;background:var(--card);border:2px dashed var(--line);
+         aspect-ratio:4/3;display:grid;place-items:center;text-align:center;padding:16px;color:var(--ink);opacity:.75;font-size:.9rem}
+  .photo:has(img){border:0;padding:0;opacity:1;display:block;aspect-ratio:auto}
+  .photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+  .photo.wide{aspect-ratio:16/9}
+  .photo.wide img{aspect-ratio:16/9}
+  .photo.small{aspect-ratio:3/2;margin-top:14px;font-size:.85rem}
+  .photo.small img{aspect-ratio:3/2}
+  .photo figcaption{font-weight:600}
+  .photo figcaption small{display:block;font-weight:400;opacity:.8;margin-top:4px}
+
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  @media (max-width:760px){.hero .wrap{grid-template-columns:1fr;gap:28px} .hero .photo{aspect-ratio:16/9} .hero .photo img{aspect-ratio:16/9}}
+
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+  @media (max-width:520px){.pair{grid-template-columns:1fr}}
+  .pair .photo{aspect-ratio:1/1}
+  .pair .photo img{aspect-ratio:1/1}
+
+  #about{background:var(--card)}
+  #about .card{background:var(--bg)}
+  #about .who{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+  #about .who h3{margin:0 0 4px;font-size:1.05rem}
+
+  /* LAUNCH MODE (added 2026-09-04). Until the real photos arrive, empty photo slots are hidden
+     completely instead of showing dashed boxes, and the top section goes back to one column.
+     A slot with an <img> inside still shows. Delete this block to see the dashed boxes again. */
+  .photo:not(:has(img)){display:none}
+  .pair:not(:has(img)){display:none}
+  .hero .wrap:not(:has(.photo img)){grid-template-columns:1fr}
+
+  /* Thank-you message after the quote form sends */
+  #thanks{background:var(--accent-soft);border-left:6px solid var(--accent);padding:22px 24px;border-radius:var(--r);max-width:560px}
+  #thanks h3{margin:0 0 6px;font-size:1.2rem}
+  #thanks p{margin:0 0 14px}
+  .form-error{color:var(--bad);font-weight:600;margin:0}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Micro Hauling &amp; Junk Removal<small>Provo &amp; Utah County</small></a>
+    <a class="call" href="tel:3852046385">Call or text 385-204-6385</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+   <div>
+    <span class="badge">Small jobs are our whole business</span>
+    <h1>Small junk jobs.<br>Small prices.<br>One trip, done.</h1>
+    <p class="lead">The couch, the mattress, the garage pile. Utah County's affordable hauler for the jobs the big trucks charge too much for. Text us a photo, get a real price, and we haul it. Most jobs on Saturdays, weekday evenings too.</p>
+    <div class="btns">
+      <a class="btn primary" href="sms:3852046385?body=Hi!%20I%27d%20like%20a%20quote.%20Here%27s%20a%20photo%20of%20what%20needs%20to%20go:">Text us a photo</a>
+      <a class="btn ghost" href="#quote">Request a quote online</a>
+    </div>
+   </div>
+    <!-- PHOTO SLOT 1: the truck with the trailer hitched, both of you at the tailgate. File: img/hero-truck.jpg -->
+    <figure class="photo" id="photo-hero">
+      <figcaption>Photo: the truck and trailer<small>Both of you at the tailgate, truck wiped down, morning light. Landscape.</small></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="prices">
+  <div class="wrap">
+    <h2>Prices you can see before you call</h2>
+    <p class="sub">Same price every day. Cash or Venmo. Every price includes labor, carry-out from anywhere in the home, loading, disposal fees, and a quick sweep.</p>
+    <div class="grid tiers">
+      <div class="card"><h3>Single Item</h3><div class="price">$75</div><p>One large item: a couch, mattress, appliance, or desk. Each extra large item adds $30.</p></div>
+      <div class="card"><h3>Quarter Load</h3><div class="price">$105</div><p>Two large items, or the truck bed about half full.</p></div>
+      <div class="card"><h3>Half Load</h3><div class="price">$150</div><p>The truck bed full. A room's worth, no trailer needed.</p></div>
+      <div class="card"><h3>Full Load</h3><div class="price">$250</div><p>Truck bed and trailer both full. The most one trip carries. Saturdays only. Bigger pile? What is left is priced as its own trip, quoted up front.</p></div>
+    </div>
+    <p class="note">Need the trailer for something smaller than a Full Load? Add $40, Saturdays only. Custom jobs (light demolition, larger commercial clean-outs) start at $150. Send photos and we will quote it.</p>
+
+    <div class="grid two" style="margin-top:32px">
+      <div class="card">
+        <h3>A few items cost a little extra</h3>
+        <p>The dump charges us extra for these, so we pass that along. Nothing hidden, and we tell you up front.</p>
+        <table>
+          <tr><td>Mattress or box spring</td><td>+$25 each</td></tr>
+          <tr><td>Fridge, freezer, or AC unit</td><td>+$20 each</td></tr>
+          <tr><td>TV or electronics</td><td>+$15 each</td></tr>
+          <tr><td>Tire (two per job max)</td><td>+$10 each</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Ways to save $10</h3>
+        <ul class="clean">
+          <li><strong>Driveway discount.</strong> Have everything stacked outside before we arrive. A single item from the driveway is $65.</li>
+          <li><strong>Repeat discount.</strong> $10 off your second job with us.</li>
+        </ul>
+        <p class="fine" style="margin-top:12px">One discount per job.</p>
+      </div>
+    </div>
+
+    <div class="promise" style="margin-top:32px">
+      <strong>Our promise:</strong> the price we text you is the price you pay. If the pile turns out bigger than the photos showed, we tell you the new price before we touch anything.
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <div class="grid steps" style="margin-top:28px">
+      <div class="card"><h3>Text us a photo</h3><p>Snap a picture of what needs to go and text it to 385-204-6385, or use the form below.</p></div>
+      <div class="card"><h3>Get a real price</h3><p>We reply with a firm price from the list above and a time that works. Saturdays 7am to 6pm, weekdays 5pm to 9pm. Weeknights are truck-bed jobs only; trailer loads are Saturdays.</p></div>
+      <div class="card"><h3>We haul it</h3><p>Two of us show up, carry it out, load it, sweep up, and take it away. Pay cash or Venmo when we are done.</p>
+        <!-- PHOTO SLOT 2: the swept-clean "after" of a garage corner or room. File: img/how-after.jpg -->
+        <figure class="photo small" id="photo-after"><figcaption>Photo: the swept-clean space after we leave</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Two guys, one truck, small prices</h2>
+    <p class="lead">We are Connor and Trex, Utah County locals based in Provo who got tired of watching neighbors pay big-truck prices to get rid of one couch. Micro Hauling is our evenings-and-Saturdays business: a Toyota Tacoma, a trailer when the job needs it, and two people who carry it out, sweep up, and take it away.</p>
+    <div class="grid two" style="margin-top:28px;align-items:start">
+      <div>
+        <div class="who">
+          <div class="card">
+            <h3>Connor</h3>
+            <p>I grew up in Salem, I am recently married and I have a full time job and go to school. I've always had the entrepreneurship spirit and wanted to start a little side hustle.</p>
+          </div>
+          <div class="card">
+            <h3>Trex</h3>
+            <p>I grew up in Pleasant Grove, I'm working at American Heritage Worldwide as the Lead AI Product Manager. I've wanted to leverage my computer skills to start my own business and this is something I would enjoy!</p>
+          </div>
+        </div>
+        <ul class="clean yes" style="margin-top:20px">
+          <li>A real price by text before we come. The price we text is the price you pay.</li>
+          <li>We show up in the one-hour window we promised, or you hear from us first.</li>
+          <li>We carry it out from anywhere in the home and sweep when we are done.</li>
+          <li>Usable furniture goes to Deseret Industries or Habitat ReStore, not the landfill.</li>
+        </ul>
+      </div>
+      <!-- PHOTO SLOT 3: the two of you, faces visible, at the truck. This is the trust photo. File: img/about-owners.jpg -->
+      <figure class="photo" id="photo-owners">
+        <figcaption>Photo: Connor and Trex at the truck<small>Faces visible, gloves on, smiling. This is the photo that gets a stranger to open the door.</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <h2>What we take, and what we don't</h2>
+    <p class="sub">We are two people and a pickup with a trailer. That keeps prices low. Most jobs are one trip; bigger piles are priced by the trip, so you know the whole number before we start.</p>
+    <div class="grid two">
+      <div class="card">
+        <h3>We take</h3>
+        <ul class="clean yes">
+          <li>Furniture, mattresses, appliances, and electronics</li>
+          <li>Garage, basement, and shed clean-outs</li>
+          <li>Move-out and rental turnover clean-outs</li>
+          <li>Yard debris: branches, leaves, old fence boards</li>
+          <li>Bagged trash and boxed items</li>
+          <li>Trampolines, swing sets, and bed frames (we take them apart)</li>
+          <li>Small business and landlord jobs</li>
+          <li>Light demolition, quoted case by case</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>We don't take</h3>
+        <ul class="clean no">
+          <li>Paint, chemicals, oil, propane, or batteries</li>
+          <li>Concrete, dirt, brick, tile, or shingles</li>
+          <li>Pianos, hot tubs, safes, pool tables, cast-iron tubs</li>
+          <li>Hoarding or biohazard clean-ups</li>
+          <li>More than two tires</li>
+          <li>Loose food waste or unbagged debris</li>
+        </ul>
+        <p class="fine" style="margin-top:12px">We reserve the right to refuse any item on arrival.</p>
+      </div>
+    </div>
+    <p class="note">Usable furniture and goods go to Deseret Industries or Habitat ReStore when we can. Metal gets recycled. The dump is our last stop, not our first.</p>
+    <!-- PHOTO SLOTS 4 and 5: one real job, before and after, same angle, customer's OK, no house numbers. Files: img/job1-before.jpg, img/job1-after.jpg -->
+    <div class="pair">
+      <figure class="photo" id="photo-before"><figcaption>Before<small>A real job, photographed from the doorway</small></figcaption></figure>
+      <figure class="photo" id="photo-after2"><figcaption>After<small>Same spot, same angle, swept</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <h2>Where we go</h2>
+    <p class="lead">Based in Provo. Regular prices anywhere within 25 miles, which covers nearly all of Utah County: Orem, Vineyard, Lindon, Pleasant Grove, American Fork, Lehi, Saratoga Springs, Springville, Mapleton, Spanish Fork, Salem, Payson, and more. Farther than 25 miles adds a flat $20.</p>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap">
+    <h2>Request a quote</h2>
+    <p class="sub">Fill this out and we will text you a price. Photos help us quote fast, so text them to 385-204-6385 after you submit.</p>
+    <!--
+      HOW THE FORM REACHES YOUR EMAIL (Web3Forms, free, no account needed):
+      The access_key below delivers submissions to microhaulingjunkremoval@gmail.com (set 2026-09-04).
+      To change the email later: go to https://web3forms.com, type the new address, click "Create Access Key",
+      copy the key they email you, and swap it into the value below. Nothing else changes.
+      Free plan: 250 submissions a month, spam protection included. Photos cannot be attached,
+      which is why the page asks people to text them.
+      After a send, the small script at the bottom of this file swaps the form for the thank-you
+      message (id="thanks") without leaving the page. If the script cannot run, the form still sends
+      the old way and Web3Forms shows its own thank-you page.
+    -->
+    <form action="https://api.web3forms.com/submit" method="POST" id="quote-form">
+      <input type="hidden" name="access_key" value="74aae58f-cfe8-432c-93ff-fbe7ac18e97e">
+      <input type="hidden" name="subject" value="New quote request from the website">
+      <input type="hidden" name="from_name" value="Micro Hauling website">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <label>Your name<input type="text" name="name" required placeholder="First name is fine"></label>
+        <label>Phone (we text you the price)<input type="tel" name="phone" required placeholder="801-555-0100"></label>
+      </div>
+      <div class="row">
+        <label>City<input type="text" name="city" required placeholder="Provo"></label>
+        <label>Best guess at size
+          <select name="load_size" required>
+            <option value="">Choose one</option>
+            <option>Single item</option>
+            <option>Quarter load (two large items, or truck bed half full)</option>
+            <option>Half load (truck bed full)</option>
+            <option>Full load (truck and trailer full)</option>
+            <option>Not sure</option>
+          </select>
+        </label>
+      </div>
+      <label>What needs to go?<textarea name="description" required placeholder="Example: a couch, a queen mattress, and about six bags of trash in the garage."></textarea></label>
+      <label>When works for you?<input type="text" name="timing" placeholder="We can do Saturdays 7am to 6pm · Weekdays 5pm to 9pm"></label>
+      <button class="btn primary" type="submit">Send my quote request</button>
+      <p class="fine">We reply by text, usually the same day. No spam, no sharing your number.</p>
+      <p class="form-error" id="form-error" hidden>That did not send. Please text us instead at <a href="sms:3852046385">385-204-6385</a>.</p>
+    </form>
+    <div id="thanks" hidden>
+      <h3>Got it. We will text you a price.</h3>
+      <p>Usually within the hour during our hours, otherwise first thing the next evening or Saturday morning. Want it faster? Text the photos now.</p>
+      <a class="btn primary" href="sms:3852046385?body=Hi!%20I%20just%20sent%20the%20quote%20form.%20Here%20are%20the%20photos:">Text us the photos</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Micro Hauling &amp; Junk Removal</strong> · Provo, Utah · <a href="tel:3852046385">385-204-6385</a><br>
+    Saturdays 7am to 6pm · Weekdays 5pm to 9pm · Cash or Venmo
+  </div>
+</footer>
+
+<script>
+// Sends the quote form in the background and shows the thank-you message in place of the form.
+(function () {
+  var form = document.getElementById('quote-form');
+  var thanks = document.getElementById('thanks');
+  var err = document.getElementById('form-error');
+  if (!form || !window.fetch) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Sending...'; err.hidden = true;
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data.success) {
+          form.hidden = true; thanks.hidden = false;
+          thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else { throw new Error(data && data.message); }
+      })
+      .catch(function () {
+        err.hidden = false; btn.disabled = false; btn.textContent = 'Send my quote request';
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
