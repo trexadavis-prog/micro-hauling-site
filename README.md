@@ -19,7 +19,7 @@ microhaulingjunkremoval.com was unregistered on 2026-09-04. To buy it (about $11
 The owners chose Spaceship (spaceship.com, run by Namecheap) as the place to buy it.
 
 1. Go to https://www.spaceship.com and search `microhaulingjunkremoval.com`. Click **Add to cart**, then **Checkout**. Create the Spaceship account with the business email. Pick a 1-year term with auto-renew on. Decline every add-on (hosting, email, SSL, "premium DNS"); the site needs none of them, and WHOIS privacy is included free.
-2. After paying, open **Domain Manager** (top menu), click the domain, then the **DNS** tab (Spaceship calls it "Advanced DNS"). If it offers a "Launchpad" or "Unstoppable" toggle, leave those alone. Delete any records already in the list (Spaceship adds a couple of parking records), then click **Add record** five times and type these exactly. For "Host", Spaceship uses `@` to mean the bare domain.
+2. After paying, open **Domain Manager** (top menu), click the domain, then find **DNS records** (Spaceship groups it under "Launchpad", and may call the list "Advanced DNS"). Delete the records already in the list: Spaceship adds two A records that point the name at its own parking page, and the site cannot connect until they are gone, then click **Add record** five times and type these exactly. For "Host", Spaceship uses `@` to mean the bare domain.
 
    | Type  | Host | Value / Points to             | TTL     |
    |-------|------|-------------------------------|---------|
