@@ -46,7 +46,7 @@ Free plan limits: 250 form submissions a month and no photo attachments. That is
 
 Everything on the page is plain text inside `index.html`. Search for the thing you want to change and retype it. Common edits:
 
-- **Prices**: search `$75`, `$105`, `$150`, `$250`. Each appears once in the price cards. The `$65` in the title, meta description, and Driveway line is the single-item driveway price ($75 less the $10 discount); the `$30` add-on and `$40` trailer fee sit under the cards.
+- **Prices**: search `$75`, `$105`, `$150`, `$250`. Each appears once in the price cards. The title, meta description, and both link-preview tags say $75; the one remaining `$65` is the Driveway line ($75 less the $10 discount). The `$30` add-on and `$40` trailer fee sit under the cards.
 - **Surcharges**: search `+$25`, `+$20`, `+$15`, `+$10`.
 - **Phone number**: search `3852046385` (used in the call and text links) and `385-204-6385` (the printed number). Change every one.
 - **Hours**: search `7am to 6pm` and `5pm to 9pm`. They appear three times each.
