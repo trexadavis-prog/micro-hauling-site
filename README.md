@@ -89,6 +89,10 @@ Search `id="about"`. The heading, the paragraph, the two name cards, and the fou
 
 `marketing/posts.md` holds ready-to-paste listings and posts: five Facebook Marketplace listings (one per thing people actually search for) and four Nextdoor posts, plus notes on how often to post to each.
 
+`marketing/google-business-profile.md` holds the exact text for every box in the Google
+Business Profile listing, copied from the site so the two agree, plus the photo list and
+the video-verification notes.
+
 `marketing/graphics/` holds five square images to post with them, built from the site's own colours and logo. The `.html` file beside each `.png` is what made it; to change a price, edit the HTML and ask Claude to re-render.
 
 Prices in those files are copies, not links. When a price changes on the site, change it in `marketing/posts.md` and re-render the graphics too, or you are advertising a number you no longer charge.
