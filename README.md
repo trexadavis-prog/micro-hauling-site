@@ -107,6 +107,16 @@ Note that `README.md`, this file, is **not** excluded and can be read by anyone 
 - `robots.txt` and `sitemap.xml` next to `index.html`. They tell search engines the site is open and where the page is. Nothing to maintain, except the date in `sitemap.xml` if you want Google to recrawl after a big change.
 - The header shows the wordmark (`img/wordmark.svg`, letters converted to outlines so no web font is needed). The tab icon is the Micro Hauling icon (two peaks with the black M square): `favicon-32`, `icon-192`, `apple-touch-icon` in `img/`. Decided 2026-09-04; the full final logo kit lives in `deliverables/logos/final/`.
 
+## Google Search Console (set up 2026-09-09)
+
+Search Console is Google's free dashboard showing which searches found the site and whether Google can read it. It is signed in with the business Gmail account.
+
+**Do not delete `google7c0105c25d7a8551.html`.** It is the odd-looking one-line file next to `index.html`. Google fetches it to confirm the site is yours. If it disappears the site loses its verification and the dashboard stops reporting. It is not a page anybody visits.
+
+The useful screen is **Performance**: the actual words people typed before they landed on the site. Read it after a few weeks and put those words on the page.
+
+`sitemap.xml` was submitted the same day. It only needs resubmitting if the address of the page ever changes; edits to the page do not need it. If you want Google to recrawl sooner after a big change, update the date in `sitemap.xml`.
+
 ## Not done yet (on purpose)
 
 - The five photo slots are hidden until you send photos. Fill-level photos on the price cards come after the first jobs.
