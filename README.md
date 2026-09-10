@@ -46,7 +46,7 @@ Free plan limits: 250 form submissions a month and no photo attachments. That is
 
 Everything on the page is plain text inside `index.html`. Search for the thing you want to change and retype it. Common edits:
 
-- **Prices**: search `$75`, `$150`, `$250`. Each appears once in the price cards. The title, meta description, and both link-preview tags say $75; the one remaining `$65` is the Driveway line ($75 less the $10 discount). The `$40` trailer fee sits under the cards. The Quarter Load ($105) and the $30 extra-large-item add-on were removed 2026-09-07.
+- **Prices**: search `$75`, `$150`, `$250`. They now appear in four places each: the price cards, the FAQ list, the `FAQPage` block, and the `hasOfferCatalog` block. Change all of them. The title, meta description, and both link-preview tags say $75; the one remaining `$65` is the Driveway line ($75 less the $10 discount). The `$40` trailer fee sits under the cards. The Quarter Load ($105) and the $30 extra-large-item add-on were removed 2026-09-07.
 - **Surcharges**: search `+$25`, `+$20`, `+$15`, `+$10`.
 - **Phone number**: search `3852046385` (used in the call and text links) and `385-204-6385` (the printed number). Change every one.
 - **Hours**: search `7am to 6pm` and `5pm to 9pm`. They appear three times each.
@@ -54,6 +54,14 @@ Everything on the page is plain text inside `index.html`. Search for the thing y
 - **Colors**: near the top of the file, in the `:root` block, `--accent` is the green. Swap the hex code for another color and every button and price changes with it.
 
 After any edit, save and refresh the browser to check it. If something looks broken, undo the last change, or ask Claude to fix it and paste in the error.
+
+## The FAQ
+
+Below the quote form sits one closed row, "Questions people ask before they call". Tapping it opens eight questions, and tapping any one of those opens its answer. It stays closed by default so it costs one line of height instead of eight. Search `id="faq"`.
+
+Every question and answer appears **twice** in `index.html`: once in the visible list, and once near the top of the file in a block Google reads (search `FAQPage`). They have to match. If you change a price or an hour in one, change it in the other, or Google keeps quoting a number you no longer charge.
+
+To add a question, copy one of the inner `<details>` blocks and retype it, then add the same question and answer to the `FAQPage` block above. If you add or remove one, change "8 answers" in the outer row to match (search `class="count"`).
 
 ## Adding photos
 
@@ -77,10 +85,22 @@ Search `id="about"`. The heading, the paragraph, the two name cards, and the fou
 - **Request a quote online** scrolls down to the form.
 - The form sends to your email through Web3Forms and then shows a green thank-you box in place of the form. The box's button opens a text to 385-204-6385 with the customer's request already typed in (name, city, load, description, timing), so when they add photos and hit send, the whole request lands in Google Voice too. If the send fails, a red line asks the customer to text instead.
 
+## Posts and graphics for Facebook and Nextdoor
+
+`marketing/posts.md` holds ready-to-paste listings and posts: five Facebook Marketplace listings (one per thing people actually search for) and four Nextdoor posts, plus notes on how often to post to each.
+
+`marketing/graphics/` holds five square images to post with them, built from the site's own colours and logo. The `.html` file beside each `.png` is what made it; to change a price, edit the HTML and ask Claude to re-render.
+
+Prices in those files are copies, not links. When a price changes on the site, change it in `marketing/posts.md` and re-render the graphics too, or you are advertising a number you no longer charge.
+
+Nothing there says "insured" or "licensed", on purpose. Do not add either until a policy actually exists.
+
 ## Also on the page, invisible to customers
 
 - Link-preview tags, so pasting the address into Facebook, Nextdoor, or a text shows the name, a one-line pitch, and (once the truck photo exists) the picture.
-- A business-facts block for Google (name, phone, hours, service towns, price range). City only; no street address anywhere.
+- A business-facts block for Google (name, phone, hours, service towns, price range), including the three prices as an offer list. City only; no street address anywhere.
+- A copy of the FAQ in the format Google reads (search `FAQPage`).
+- `robots.txt` and `sitemap.xml` next to `index.html`. They tell search engines the site is open and where the page is. Nothing to maintain, except the date in `sitemap.xml` if you want Google to recrawl after a big change.
 - The header shows the wordmark (`img/wordmark.svg`, letters converted to outlines so no web font is needed). The tab icon is the Micro Hauling icon (two peaks with the black M square): `favicon-32`, `icon-192`, `apple-touch-icon` in `img/`. Decided 2026-09-04; the full final logo kit lives in `deliverables/logos/final/`.
 
 ## Not done yet (on purpose)

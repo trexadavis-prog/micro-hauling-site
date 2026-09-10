@@ -1,2 +1,8 @@
 .DS_Store
 Thumbs.db
+
+# Local preview config, not part of the site
+.claude/
+
+# Regenerable bundle of the marketing graphics
+marketing/graphics/*.zip

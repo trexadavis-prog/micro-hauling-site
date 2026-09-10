@@ -50,9 +50,99 @@
     {"@type": "City", "name": "Mapleton"}, {"@type": "City", "name": "Spanish Fork"}, {"@type": "City", "name": "Salem"},
     {"@type": "City", "name": "Payson"}
   ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Junk removal prices",
+    "itemListElement": [
+      {"@type": "Offer", "name": "One Item", "price": "75", "priceCurrency": "USD",
+       "description": "One large item: a couch, a mattress, an appliance, or a desk. Includes labor, carry-out, loading, disposal fees, and a sweep.",
+       "itemOffered": {"@type": "Service", "name": "Single-item junk removal", "serviceType": "Junk removal"}},
+      {"@type": "Offer", "name": "Half Load", "price": "150", "priceCurrency": "USD",
+       "description": "The truck bed full, about a room's worth. Includes labor, carry-out, loading, disposal fees, and a sweep.",
+       "itemOffered": {"@type": "Service", "name": "Half-load junk removal", "serviceType": "Junk removal"}},
+      {"@type": "Offer", "name": "Full Load", "price": "250", "priceCurrency": "USD",
+       "description": "Truck bed and trailer both full, the most one trip carries. Saturdays only. Includes labor, carry-out, loading, disposal fees, and a sweep.",
+       "itemOffered": {"@type": "Service", "name": "Full-load junk removal", "serviceType": "Junk removal"}}
+    ]
+  },
   "openingHoursSpecification": [
     {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "17:00", "closes": "21:00"},
     {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:00", "closes": "18:00"}
+  ]
+}
+</script>
+<!-- The eight FAQ questions, repeated for Google in the format it reads. Generated from the
+     visible FAQ lower down the page, so the two always say the same thing. If you edit a
+     question or an answer down there, edit the matching one here. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does junk removal cost in Provo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three prices, the same every day: $75 for one large item, $150 for a half load (the truck bed full), and $250 for a full load (truck and trailer both full). Every price includes labor, carry-out, loading, dump fees, and a sweep. Cash or Venmo. A few items cost the dump extra, so they cost a little extra here too, and we tell you the whole number before we come."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you take mattresses, fridges, and TVs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All three. The dump charges us extra for them, so we pass that along: a mattress or box spring is +$25, a fridge, freezer, or AC unit is +$20, and a TV or other electronics is +$15. Tires are +$10 each, two per job."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What won't you take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paint, chemicals, oil, propane, and batteries. Concrete, dirt, brick, tile, and shingles. Pianos, hot tubs, safes, pool tables, and cast-iron tubs. Hoarding and biohazard clean-ups. More than two tires, and loose or unbagged food waste."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How soon can you come?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Text a photo to 385-204-6385 and you will usually have a firm price the same day. We haul Saturdays 7am to 6pm and weekdays 5pm to 9pm. Weeknights are truck-bed jobs; anything that needs the trailer is a Saturday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to carry it out to the driveway myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Carrying it out is included in the price, upstairs and basements too. You point, we lift. If you would rather stack it in the driveway before we arrive, that takes $10 off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the price you text me the price I pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. No hourly rate, no surprise at the end. If the pile turns out bigger than the photos showed, we tell you the new price before we touch anything, and you are free to say no."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What towns do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Provo and everywhere within 25 miles, which covers nearly all of Utah County: Orem, Vineyard, Lindon, Pleasant Grove, American Fork, Lehi, Saratoga Springs, Springville, Mapleton, Spanish Fork, Salem, and Payson. Farther than 25 miles adds a flat $20."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to my stuff after you take it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usable furniture and goods go to Deseret Industries or Habitat ReStore when we can, and metal gets recycled. The dump is our last stop, not our first."
+      }
+    }
   ]
 }
 </script>
@@ -69,6 +159,11 @@
     class="photo"           a photo slot. Grey dashed box until the real photo goes in (see README, "Adding photos")
     LAUNCH MODE             the CSS block that hides empty photo slots. Delete it to see the dashed boxes again
     id="about"              the About us section; names and story live there
+    id="faq"                the FAQ below the quote form. It is one closed row until someone taps it;
+                            inside are eight questions. Every one is repeated in the FAQPage block at
+                            the top of this file - change a price in one, change it in the other
+    FAQPage                 the copy of the FAQ that Google reads
+    hasOfferCatalog         the three prices, written the way Google reads them. Keep in step with the price cards
     microhaulingjunkremoval.com  the web address, used in the link-preview tags and the Google facts block (5 places).
                             If a different domain is bought, replace it everywhere.
     id="side-text"          the "Rather text than type?" card beside the form. Hidden once the form is sent.
@@ -183,6 +278,48 @@
   /* Nothing on the page had a focus ring, so a keyboard user had no idea where they were. */
   a:focus-visible,button:focus-visible,input:focus-visible,
   select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent-ink);outline-offset:2px;border-radius:4px}
+  /* The FAQ rows sit inside a card that clips, so their ring goes inside the edge instead of outside it. */
+  .faq summary:focus-visible{outline:3px solid var(--accent-ink);outline-offset:-3px}
+  /* The thank-you box and the error line get focus after the form sends, so a screen reader reads them out. */
+  #thanks:focus,.form-error:focus{outline:none}
+
+  /* THE FAQ. Plain <details> rows: they open and close with no JavaScript, and a screen reader
+     announces them correctly on its own. The same eight questions and answers are repeated in the
+     FAQ block for Google near the top of the file - change a word here, change it there too. */
+  /* The FAQ sits under the quote form now, so it reads as backup, not a rival headline. */
+  #faq{padding:30px 0 40px}
+
+  /* The outer toggle: one card-shaped row that opens the whole FAQ. */
+  .faq-all{max-width:740px}
+  .faq-all>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;
+                   gap:16px;min-height:58px;padding:14px 20px;background:var(--card);border:1px solid var(--edge);
+                   border-radius:var(--r);box-shadow:var(--shadow)}
+  .faq-all>summary::-webkit-details-marker{display:none}
+  .faq-all>summary:hover{background:var(--accent-soft)}
+  .faq-all>summary:focus-visible{outline:3px solid var(--accent-ink);outline-offset:2px}
+  .faq-all>summary h2{margin:0;font-size:clamp(1.1rem,2vw,1.4rem)}
+  .faq-all>summary .count{flex:none;display:flex;align-items:center;gap:10px;color:var(--accent);
+                          font-weight:700;font-size:.88rem;white-space:nowrap}
+  .faq-all>summary .count::after{content:"+";font-size:1.35rem;font-weight:800;line-height:1}
+  .faq-all[open]>summary .count::after{content:"\2013"}
+  /* Open, the row becomes the head of one card with the questions under it. */
+  .faq-all[open]>summary{border-radius:var(--r) var(--r) 0 0;box-shadow:none}
+  .faq-all .inner{background:var(--card);border:1px solid var(--edge);border-top:0;
+                  border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);overflow:hidden}
+  .faq-all .inner>.sub{margin:0;padding:15px 18px 3px;font-size:.92rem}
+  @media (max-width:560px){.faq-all>summary .count{font-size:0;gap:0}}
+  .faq{background:none;border:0;border-radius:0;box-shadow:none;max-width:none;margin:0;overflow:hidden}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq details:last-child{border-bottom:0}
+  .faq summary{cursor:pointer;list-style:none;padding:13px 18px;min-height:48px;font-weight:700;font-size:.95rem;
+               display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";flex:none;color:var(--accent);font-weight:800;font-size:1.25rem;line-height:1}
+  .faq details[open] summary::after{content:"\2013"}
+  .faq summary:hover{background:var(--accent-soft)}
+  .faq .answer{padding:0 18px 15px;margin:0;max-width:68ch;color:var(--ink-muted);font-size:.93rem}
+  .faq .answer p{margin:0 0 9px;color:inherit}
+  .faq .answer p:last-child{margin:0}
 
   /* THE RIDGE. The two peaks from the logo icon, stretched across the page. Inline SVG: no image
      file, no extra download. preserveAspectRatio="none" lets it stretch instead of crop. */
@@ -426,11 +563,11 @@
       <input type="hidden" name="from_name" value="Micro Hauling website">
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <div class="row">
-        <label>Your name<input type="text" name="name" required placeholder="First name is fine"></label>
-        <label>Phone (we text you the price)<input type="tel" name="phone" required placeholder="801-555-0100"></label>
+        <label>Your name<input type="text" name="name" required autocomplete="name" placeholder="First name is fine"></label>
+        <label>Phone (we text you the price)<input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="801-555-0100"></label>
       </div>
       <div class="row">
-        <label>City<input type="text" name="city" required placeholder="Provo"></label>
+        <label>City<input type="text" name="city" required autocomplete="address-level2" placeholder="Provo"></label>
         <label>Best guess at size
           <select name="load_size" required>
             <option value="">Choose one</option>
@@ -445,9 +582,9 @@
       <label>When works for you?<span class="hint">We work Saturdays 7am to 6pm and weekdays 5pm to 9pm.</span><input type="text" name="timing" placeholder="Example: this Saturday morning"></label>
       <button class="btn primary" type="submit">Send my quote request</button>
       <p class="fine">We reply by text, usually the same day. No spam, no sharing your number.</p>
-      <p class="form-error" id="form-error" hidden>That did not send. Please text us instead at <a href="sms:3852046385">385-204-6385</a>.</p>
+      <p class="form-error" id="form-error" role="alert" tabindex="-1" hidden>That did not send. Please text us instead at <a href="sms:3852046385">385-204-6385</a>.</p>
     </form>
-    <div id="thanks" hidden>
+    <div id="thanks" role="status" tabindex="-1" hidden>
       <h3>Got it. We will text you a price.</h3>
       <p>Usually within the hour during our hours, otherwise first thing the next evening or Saturday morning. Want it faster? Tap below: it opens a text to us with your request already typed in, so just add the photos and hit send.</p>
       <a class="btn primary" id="thanks-sms" href="sms:3852046385?body=Hi!%20I%20just%20sent%20the%20quote%20form.%20Here%20are%20the%20photos:">Text us the photos</a>
@@ -469,6 +606,76 @@
       </div>
     </aside>
     </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <!-- The whole FAQ is a single collapsed row until someone taps it, so it costs one line of
+         height instead of eight. The eight questions inside still open one at a time. -->
+    <details class="faq-all">
+      <summary>
+        <h2>Questions people ask before they call</h2>
+        <span class="count">8 answers</span>
+      </summary>
+      <div class="inner">
+        <p class="sub">The same answers we give on the phone. Anything else, just text us.</p>
+      <!-- THE FAQ. Every question and answer here is repeated word for word in the FAQ block for
+           Google near the top of this file (search "FAQPage"). If you change a price or an hour
+           here, change it there too, or Google is quoting a number you no longer charge. -->
+      <div class="faq">
+        <details>
+          <summary>How much does junk removal cost in Provo?</summary>
+          <div class="answer">
+            <p>Three prices, the same every day: <strong>$75</strong> for one large item, <strong>$150</strong> for a half load (the truck bed full), and <strong>$250</strong> for a full load (truck and trailer both full). Every price includes labor, carry-out, loading, dump fees, and a sweep. Cash or Venmo.</p>
+            <p>A few items cost the dump extra, so they cost a little extra here too, and we tell you the whole number before we come.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you take mattresses, fridges, and TVs?</summary>
+          <div class="answer">
+            <p>All three. The dump charges us extra for them, so we pass that along: a mattress or box spring is +$25, a fridge, freezer, or AC unit is +$20, and a TV or other electronics is +$15. Tires are +$10 each, two per job.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What won't you take?</summary>
+          <div class="answer">
+            <p>Paint, chemicals, oil, propane, and batteries. Concrete, dirt, brick, tile, and shingles. Pianos, hot tubs, safes, pool tables, and cast-iron tubs. Hoarding and biohazard clean-ups. More than two tires, and loose or unbagged food waste.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How soon can you come?</summary>
+          <div class="answer">
+            <p>Text a photo to 385-204-6385 and you will usually have a firm price the same day. We haul Saturdays 7am to 6pm and weekdays 5pm to 9pm. Weeknights are truck-bed jobs; anything that needs the trailer is a Saturday.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I have to carry it out to the driveway myself?</summary>
+          <div class="answer">
+            <p>No. Carrying it out is included in the price, upstairs and basements too. You point, we lift. If you would rather stack it in the driveway before we arrive, that takes $10 off.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is the price you text me the price I pay?</summary>
+          <div class="answer">
+            <p>Yes. No hourly rate, no surprise at the end. If the pile turns out bigger than the photos showed, we tell you the new price before we touch anything, and you are free to say no.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What towns do you serve?</summary>
+          <div class="answer">
+            <p>Provo and everywhere within 25 miles, which covers nearly all of Utah County: Orem, Vineyard, Lindon, Pleasant Grove, American Fork, Lehi, Saratoga Springs, Springville, Mapleton, Spanish Fork, Salem, and Payson. Farther than 25 miles adds a flat $20.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens to my stuff after you take it?</summary>
+          <div class="answer">
+            <p>Usable furniture and goods go to Deseret Industries or Habitat ReStore when we can, and metal gets recycled. The dump is our last stop, not our first.</p>
+          </div>
+        </details>
+      </div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -506,6 +713,8 @@
           if (smsBtn) { smsBtn.href = 'sms:3852046385?body=' + encodeURIComponent(msg); }
           btn.textContent = 'Sent';
           form.hidden = true; thanks.hidden = false;
+          // Move focus into the thank-you box so a screen reader reads it instead of going silent.
+          thanks.focus();
           // They have already typed, so the "Rather text than type?" card is moot. The green box's
           // own button carries the request prefilled, which is the better one to leave on screen.
           var sideText = document.getElementById('side-text');
@@ -515,6 +724,7 @@
       })
       .catch(function () {
         err.hidden = false; btn.disabled = false; btn.textContent = 'Send my quote request';
+        err.focus();
       });
   });
 })();
