@@ -1,0 +1,12 @@
+# GitHub Pages builds this site with Jekyll. Anything listed under "exclude"
+# stays in the project but is never copied to the live website.
+#
+# marketing/ holds the Facebook and Nextdoor posts and the graphics that go with
+# them. Those are working notes for the two of you, not pages for customers, so
+# they should not be reachable at microhaulingjunkremoval.com. Keeping them in
+# the project means Claude can still edit them and every change is saved.
+#
+# To keep another file off the live site, add a line under exclude with two
+# spaces and a dash in front of it, exactly like the one below.
+exclude:
+  - marketing

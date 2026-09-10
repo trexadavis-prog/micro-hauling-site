@@ -95,6 +95,10 @@ Prices in those files are copies, not links. When a price changes on the site, c
 
 Nothing there says "insured" or "licensed", on purpose. Do not add either until a policy actually exists.
 
+**The `marketing` folder is kept off the live website** by the `exclude` line in `_config.yml`, so nobody can read your posting notes at microhaulingjunkremoval.com. The files stay in the project and Claude can still edit them. To check it worked after a change goes live, open https://microhaulingjunkremoval.com/marketing/posts.md in a browser; it should say 404.
+
+Note that `README.md`, this file, is **not** excluded and can be read by anyone at microhaulingjunkremoval.com. Nothing in it is secret, but keep passwords and anything private out of it. To hide it too, add a `- README.md` line under `exclude` in `_config.yml`.
+
 ## Also on the page, invisible to customers
 
 - Link-preview tags, so pasting the address into Facebook, Nextdoor, or a text shows the name, a one-line pitch, and (once the truck photo exists) the picture.
