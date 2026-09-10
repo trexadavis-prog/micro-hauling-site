@@ -46,7 +46,7 @@ Free plan limits: 250 form submissions a month and no photo attachments. That is
 
 Everything on the page is plain text inside `index.html`. Search for the thing you want to change and retype it. Common edits:
 
-- **Prices**: search `$75`, `$150`, `$250`. They now appear in four places each: the price cards, the FAQ list, the `FAQPage` block, and the `hasOfferCatalog` block. Change all of them. The title, meta description, and both link-preview tags say $75; the one remaining `$65` is the Driveway line ($75 less the $10 discount). The `$40` trailer fee sits under the cards. The Quarter Load ($105) and the $30 extra-large-item add-on were removed 2026-09-07.
+- **Prices**: search `$75`, `$150`, `$250`. They now appear in four places each: the price cards, the FAQ list, the `FAQPage` block, and the `hasOfferCatalog` block. Change all of them. The title, meta description, and both link-preview tags say $75; the one remaining `$65` is the Driveway line ($75 less the $10 discount). The `$50` trailer fee sits under the cards. The Quarter Load ($105) and the $30 extra-large-item add-on were removed 2026-09-07.
 - **Surcharges**: search `+$25`, `+$20`, `+$15`, `+$10`.
 - **Phone number**: search `3852046385` (used in the call and text links) and `385-204-6385` (the printed number). Change every one.
 - **Hours**: search `7am to 6pm` and `5pm to 9pm`. They appear three times each.
