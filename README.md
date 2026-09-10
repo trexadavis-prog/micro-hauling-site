@@ -111,7 +111,7 @@ Note that `README.md`, this file, is **not** excluded and can be read by anyone 
 
 Search Console is Google's free dashboard showing which searches found the site and whether Google can read it. It is signed in with the business Gmail account.
 
-**Do not delete `google7c0105c25d7a8551.html`.** It is the odd-looking one-line file next to `index.html`. Google fetches it to confirm the site is yours. If it disappears the site loses its verification and the dashboard stops reporting. It is not a page anybody visits.
+**Do not delete any file next to `index.html` whose name starts with `google` and ends in `.html`.** There are two of them, each one line long, each with a meaningless name. Google fetches them to confirm the site is yours. Delete one and whatever it verifies quietly stops reporting, with no error anywhere. They are not pages anybody visits. Adding more later is fine; they do not conflict, and old ones are safe to leave.
 
 The useful screen is **Performance**: the actual words people typed before they landed on the site. Read it after a few weeks and put those words on the page.
 
